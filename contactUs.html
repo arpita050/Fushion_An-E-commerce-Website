@@ -1,0 +1,148 @@
+<!--complete-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Fushion | E-commerce Website</title>
+    <link rel="stylesheet" href="styleIndex.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navigationBar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/logo.png" width="125px"></a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="category.html">Categories</a></li>
+                        <li><a href="account.html">Login/Register</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+            </div>
+            <div class="searchBarHome">
+                <form action="" class="searchBar">
+                    <input type="text" placeholder="Search in Fushion" name="q">
+                    <button type="submit"><img src="images/searchIconForSearchBarHomepage.png"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <p>If you have any questions or concerns, please feel free to reach out to us.</p>
+          <form onsubmit="return submitForm();">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="text" id="order-number" name="order_number" placeholder="Order Number (if applicable)">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="contact-info">
+            <h2>Other Contact Options</h2>
+            <p>If you prefer, you can also contact us through the following channels:</p>
+            <ul>
+              <li>Phone: <a href="tel:+123456789">+1 234 567 89</a></li>
+              <li>Email: <a href="mailto:contact@example.com">contact@example.com</a></li>
+            </ul>
+            <h2>Frequently Asked Questions</h2>
+            <p>Before reaching out, you may find answers to your questions in our <a href="FAQs.html">FAQs</a> section.</p>
+            <h2>Visit Our Showroom</h2>
+            <p>If you prefer in-person assistance, you can visit our showroom located at:</p>
+            <p>123 Main Street, City, State, ZIP</p>
+            <p>Our showroom is open Monday to Friday, from 9:00 AM to 5:00 PM.</p>
+        </div>
+      </div>
+
+    <!--------footer------->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footerColumn-1">
+                    <h3>Download our app</h3>
+                    <p>Download our app for Android and iOS mobile phone</p>
+                    <div class="appLogo">
+                        <img src="images/app-store.png">
+                        <img src="images/play-store.png">
+                    </div>
+                </div>
+                <div class="footerColumn-2">
+                    <img src="images/logo.png">
+                    <p>We are devoted and will always encourage you to shop with us.</p>
+                </div>
+                <div class="footerColumn-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li><a href="aboutus.html">About Us</a></li>
+                        <li><a href="BlogsAndVideos.html">Blog posts</a></li>
+                        <li><a href="contactUs.html">Contact Us</a></li>
+                        <li><a href="FAQs.html">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footerColumn-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li> <i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</li>
+                        <li> <i class="fa fa-twitter" aria-hidden="true"></i> Twitter</li>
+                        <li> <i class="fa fa-instagram" aria-hidden="true"></i> Instagram</li>
+                        <li> <i class="fa fa-youtube-play" aria-hidden="true"></i> YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript code for form submission handling
+        function submitForm() {
+          // Get form inputs
+          var name = document.getElementById('name').value;
+          var email = document.getElementById('email').value;
+          var orderNumber = document.getElementById('order-number').value;
+          var subject = document.getElementById('subject').value;
+          var message = document.getElementById('message').value;
+    
+          // Perform form validation
+          if (name === '' || email === '' || subject === '' || message === '') {
+            alert('Please fill in all required fields');
+            return false;
+          }
+    
+          // Form submission code goes here
+          // You can use AJAX to submit the form data to a server-side script
+          // For example: sendFormDataToServer(name, email, orderNumber, subject, message);
+    
+          // Clear form inputs
+          document.getElementById('name').value = '';
+          document.getElementById('email').value = '';
+          document.getElementById('order-number').value = '';
+          document.getElementById('subject').value = '';
+          document.getElementById('message').value = '';
+    
+          // Display success message
+          alert('Thank you for your message. We will get back to you soon!');
+          return true;
+        }
+      </script>
+
+</body>
+
+</html>
